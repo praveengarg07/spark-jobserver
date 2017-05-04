@@ -1,0 +1,28 @@
+# Environment and deploy file
+# For use with bin/server_deploy, bin/server_package etc.
+DEPLOY_HOSTS="192.168.169.14"
+
+APP_USER=admin
+APP_GROUP=root
+JMX_PORT=9998
+# optional SSH Key to login to deploy server
+#SSH_KEY=/path/to/keyfile.pem
+INSTALL_DIR=/home/spark/job-server-new
+LOG_DIR=/var/log/job-server-new
+PIDFILE=spark-jobserver.pid
+JOBSERVER_MEMORY=10G
+SPARK_VERSION=1.6.2
+MAX_DIRECT_MEMORY=1024M
+SPARK_HOME=/data/dumps/spark-1.6.2-snapshot-hadoop2.7.1/
+SPARK_CONF_DIR=$SPARK_HOME/conf
+# Only needed for Mesos deploys
+SPARK_EXECUTOR_URI=/home/spark/spark-1.6.0.tar.gz
+# Only needed for YARN running outside of the cluster
+# You will need to COPY these files from your cluster to the remote machine
+# Normally these are kept on the cluster in /etc/hadoop/conf
+# YARN_CONF_DIR=/pathToRemoteConf/conf
+# HADOOP_CONF_DIR=/pathToRemoteConf/conf
+#
+# Also optional: extra JVM args for spark-submit
+# export SPARK_SUBMIT_OPTS+="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5433"
+SCALA_VERSION=2.10.6

@@ -8,4 +8,5 @@ object ExclusionRules {
   val excludeNettyIo = ExclusionRule(organization = "io.netty", artifact = "netty-all")
   val excludeAsm = ExclusionRule(organization = "asm")
   val excludeQQ = ExclusionRule(organization = "org.scalamacros")
+  val excludeSL = ExclusionRule(organization = "com.chuusai")
 }
